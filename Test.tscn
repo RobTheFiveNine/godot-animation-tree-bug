@@ -1,0 +1,301 @@
+[gd_scene load_steps=21 format=2]
+
+[ext_resource path="res://Animations/WalkAnimations.tres" type="Animation" id=8]
+[ext_resource path="res://Animations/WalkBlendTree.tres" type="AnimationNodeBlendTree" id=9]
+[ext_resource path="res://Animations/MovementAnimations.anim" type="Animation" id=11]
+
+[sub_resource type="Animation" id=1]
+resource_name = "HeadBob"
+loop = true
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("Skeleton2D/Hip/Chest/Head:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 79.0865, -0.25, 0, 0.25, 0, 79.0865, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("Skeleton2D/Hip/Chest/Head:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( -56.0582, -0.25, 0, 0.25, 0, -36.058, -0.25, 0, 0.25, 0, -56.0582, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5, 1 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("Skeleton2D/Hip/Chest/Head:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Animation" id=2]
+length = 2.0
+loop = true
+step = 0.05
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("Skeleton2D/Hip/Tail:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = false
+tracks/0/keys = {
+"points": PoolRealArray( -45.8414, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("Skeleton2D/Hip/Tail:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = false
+tracks/1/keys = {
+"points": PoolRealArray( -43.403, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("Skeleton2D/Hip/Tail:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( -109.9, -0.25, 0, 0.25, 0, -134.897, -0.25, 0, 0.25, 0, -109.9, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1, 2 )
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "Test"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Skeleton2D/Hip/RightBackLeg:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = false
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 100.8, 183.9 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Skeleton2D/Hip:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = false
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 152.1 ]
+}
+
+[sub_resource type="Animation" id=4]
+loop = true
+step = 0.05
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("Skeleton2D/Hip/RightBackLeg:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 10.5116, -0.25, 0, 0.25, 0, 10.5116, -0.25, 0, 0.25, 0, 10.5116, -0.25, 0, 0.25, 0, 10.5116, -0.25, 0, 0.25, 0, 10.512, -0.25, 0, 0.25, 0, 10.5116, -0.25, 0, 0.25, 0, 10.5116, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.001, 0.5, 0.501, 0.7, 1, 1.001 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("Skeleton2D/Hip/RightBackLeg:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 40.2944, -0.25, 0, 0.25, 0, 40.2944, -0.25, 0, 0.104657, -5.80035, 20.294, -0.119857, -0.946613, 0.119857, 0.946613, 40.2944, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5, 0.7, 1 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("Skeleton2D/Hip/RightBackLeg:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 77.8, -0.25, 0, 0.25, 0, 127.8, -0.25, 0, 0.25, 0, 77.8, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5, 1 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("Skeleton2D/Hip/LeftBackLeg:position:x")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 1.16788, -0.25, 0, 0.25, 0, 1.168, -0.25, 0, 0.25, 0, 1.16788, -0.25, 0, 0.25, 0, 1.16788, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.2, 0.5, 1 )
+}
+tracks/4/type = "bezier"
+tracks/4/path = NodePath("Skeleton2D/Hip/LeftBackLeg:position:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"points": PoolRealArray( 23.9431, -0.153207, 0.138159, 0.153207, -0.138159, 3.943, -0.0825414, -0.100152, 0.0825414, 0.100152, 23.9431, -0.25, 0, 0.25, 0, 23.9431, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.2, 0.5, 1 )
+}
+tracks/5/type = "bezier"
+tracks/5/path = NodePath("Skeleton2D/Hip/LeftBackLeg:rotation_degrees")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"points": PoolRealArray( 111.4, -0.25, 0, 0.25, 0, 61.4, -0.25, 0, 0.25, 0, 111.4, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5, 1 )
+}
+
+[sub_resource type="AnimationNodeBlend2" id=5]
+
+[sub_resource type="AnimationNodeAnimation" id=6]
+animation = "HeadBob"
+
+[sub_resource type="AnimationNodeAnimation" id=7]
+animation = "TailWag"
+
+[sub_resource type="AnimationNodeBlendTree" id=8]
+graph_offset = Vector2( -579, -51.5 )
+nodes/Blend2/node = SubResource( 5 )
+nodes/Blend2/position = Vector2( 80, 40 )
+nodes/HeadBob/node = SubResource( 6 )
+nodes/HeadBob/position = Vector2( -200, 40 )
+nodes/TailWag/node = SubResource( 7 )
+nodes/TailWag/position = Vector2( -200, 180 )
+nodes/output/position = Vector2( 340, 80 )
+node_connections = [ "output", 0, "Blend2", "Blend2", 0, "HeadBob", "Blend2", 1, "TailWag" ]
+
+[sub_resource type="AnimationNodeAnimation" id=9]
+animation = "Rise"
+
+[sub_resource type="AnimationNodeAnimation" id=10]
+animation = "Rise"
+
+[sub_resource type="AnimationNodeBlendTree" id=11]
+nodes/Animation/node = SubResource( 10 )
+nodes/Animation/position = Vector2( 540, 100 )
+nodes/output/position = Vector2( 900, 120 )
+node_connections = [ "output", 0, "Animation" ]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=12]
+switch_mode = 2
+auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachine" id=13]
+states/Idle/node = SubResource( 8 )
+states/Idle/position = Vector2( 377, 106 )
+states/Rise/node = SubResource( 9 )
+states/Rise/position = Vector2( 547, 106 )
+states/Rise2/node = SubResource( 11 )
+states/Rise2/position = Vector2( 542, 213 )
+states/Walk/node = ExtResource( 9 )
+states/Walk/position = Vector2( 777, 116 )
+transitions = [ "Rise2", "Walk", SubResource( 12 ) ]
+start_node = "Idle"
+graph_offset = Vector2( 30, 56 )
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=14]
+
+[sub_resource type="AnimationNodeAnimation" id=15]
+animation = "Test"
+
+[sub_resource type="AnimationNodeStateMachine" id=16]
+states/Test/node = SubResource( 15 )
+states/Test/position = Vector2( 485, 141 )
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=17]
+
+[node name="Test" type="KinematicBody2D"]
+
+[node name="Skeleton2D" type="Skeleton2D" parent="."]
+position = Vector2( -570.052, -289.127 )
+
+[node name="Hip" type="Bone2D" parent="Skeleton2D"]
+position = Vector2( 484.944, 287.748 )
+rest = Transform2D( 1, 0, 0, 1, 484.944, 287.748 )
+
+[node name="Chest" type="Bone2D" parent="Skeleton2D/Hip"]
+position = Vector2( 163.252, 3.06668 )
+rest = Transform2D( 1, 0, 0, 1, 163.252, 3.06668 )
+default_length = 92.0
+
+[node name="RightFrontLeg" type="Bone2D" parent="Skeleton2D/Hip/Chest"]
+position = Vector2( 1.75659, 12.2064 )
+rotation = 1.20253
+scale = Vector2( 1, 1 )
+rest = Transform2D( 0.359997, 0.932954, -0.932954, 0.359997, 1.75659, 12.2064 )
+default_length = 127.0
+
+[node name="LeftFrontLeg" type="Bone2D" parent="Skeleton2D/Hip/Chest"]
+position = Vector2( 8.29895, 8.49615 )
+rotation = 2.11185
+scale = Vector2( 1, 1 )
+rest = Transform2D( -0.515038, 0.857167, -0.857167, -0.515038, 8.29895, 8.49615 )
+default_length = 107.0
+
+[node name="Head" type="Bone2D" parent="Skeleton2D/Hip/Chest"]
+position = Vector2( 79.0865, -56.0582 )
+rest = Transform2D( 1, 0, 0, 1, 79.0865, -56.0582 )
+
+[node name="RightBackLeg" type="Bone2D" parent="Skeleton2D/Hip"]
+position = Vector2( 10.5116, 40.2944 )
+rotation = 1.35787
+scale = Vector2( 1, 1 )
+rest = Transform2D( 0.211325, 0.977416, -0.977416, 0.211325, 10.5116, 40.2944 )
+default_length = 94.0
+
+[node name="LeftBackLeg" type="Bone2D" parent="Skeleton2D/Hip"]
+position = Vector2( 1.16788, 23.9431 )
+rotation = 1.9443
+scale = Vector2( 1, 1 )
+rest = Transform2D( -0.364877, 0.931056, -0.931056, -0.364877, 1.16788, 23.9431 )
+default_length = 100.0
+
+[node name="Tail" type="Bone2D" parent="Skeleton2D/Hip"]
+position = Vector2( -45.8414, -43.403 )
+rotation = -1.91812
+rest = Transform2D( -0.34038, -0.940288, 0.940288, -0.34038, -45.8414, -43.403 )
+default_length = 147.0
+
+[node name="MovementPlayer" type="AnimationPlayer" parent="."]
+anims/HeadBob = SubResource( 1 )
+anims/Rise = ExtResource( 11 )
+anims/TailWag = SubResource( 2 )
+anims/Test = SubResource( 3 )
+anims/Walk_Back_Legs = SubResource( 4 )
+anims/Walk_Front_Legs = ExtResource( 8 )
+
+[node name="AnimationStateTree" type="AnimationTree" parent="."]
+tree_root = SubResource( 13 )
+anim_player = NodePath("../MovementPlayer")
+parameters/playback = SubResource( 14 )
+parameters/Idle/Blend2/blend_amount = 0.5
+parameters/Walk/BackLegsSeek/seek_position = -1.0
+parameters/Walk/FinalBlend/blend_amount = 0.5
+parameters/Walk/FrontLegsSeek/seek_position = -1.0
+parameters/Walk/HeadTailBlend/blend_amount = 0.5
+parameters/Walk/LegsBlend/blend_amount = 0.5
+parameters/Walk/TimeScale/scale = 1.0
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource( 16 )
+anim_player = NodePath("../MovementPlayer")
+parameters/playback = SubResource( 17 )

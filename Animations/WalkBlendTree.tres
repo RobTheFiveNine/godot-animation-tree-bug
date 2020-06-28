@@ -1,0 +1,50 @@
+[gd_resource type="AnimationNodeBlendTree" load_steps=11 format=2]
+
+[sub_resource type="AnimationNodeAnimation" id=1]
+animation = "Walk_Back_Legs"
+
+[sub_resource type="AnimationNodeTimeSeek" id=2]
+
+[sub_resource type="AnimationNodeBlend2" id=3]
+
+[sub_resource type="AnimationNodeAnimation" id=4]
+animation = "Walk_Front_Legs"
+
+[sub_resource type="AnimationNodeTimeSeek" id=5]
+
+[sub_resource type="AnimationNodeAnimation" id=6]
+animation = "HeadBob"
+
+[sub_resource type="AnimationNodeBlend2" id=7]
+
+[sub_resource type="AnimationNodeBlend2" id=8]
+
+[sub_resource type="AnimationNodeAnimation" id=9]
+animation = "TailWag"
+
+[sub_resource type="AnimationNodeTimeScale" id=10]
+
+[resource]
+graph_offset = Vector2( -137, 31 )
+nodes/BackLegs/node = SubResource( 1 )
+nodes/BackLegs/position = Vector2( 180, 40 )
+nodes/BackLegsSeek/node = SubResource( 2 )
+nodes/BackLegsSeek/position = Vector2( 480, 80 )
+nodes/FinalBlend/node = SubResource( 3 )
+nodes/FinalBlend/position = Vector2( 980, 280 )
+nodes/FrontLegs/node = SubResource( 4 )
+nodes/FrontLegs/position = Vector2( 180, 360 )
+nodes/FrontLegsSeek/node = SubResource( 5 )
+nodes/FrontLegsSeek/position = Vector2( 480, 280 )
+nodes/Head/node = SubResource( 6 )
+nodes/Head/position = Vector2( 420, 500 )
+nodes/HeadTailBlend/node = SubResource( 7 )
+nodes/HeadTailBlend/position = Vector2( 720, 500 )
+nodes/LegsBlend/node = SubResource( 8 )
+nodes/LegsBlend/position = Vector2( 720, 140 )
+nodes/Tail/node = SubResource( 9 )
+nodes/Tail/position = Vector2( 420, 660 )
+nodes/TimeScale/node = SubResource( 10 )
+nodes/TimeScale/position = Vector2( 1220, 300 )
+nodes/output/position = Vector2( 1440, 320 )
+node_connections = [ "output", 0, "TimeScale", "FrontLegsSeek", 0, "FrontLegs", "BackLegsSeek", 0, "BackLegs", "HeadTailBlend", 0, "Head", "HeadTailBlend", 1, "Tail", "LegsBlend", 0, "BackLegsSeek", "LegsBlend", 1, "FrontLegsSeek", "TimeScale", 0, "FinalBlend", "FinalBlend", 0, "LegsBlend", "FinalBlend", 1, "HeadTailBlend" ]
